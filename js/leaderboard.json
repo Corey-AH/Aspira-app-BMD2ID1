@@ -1,0 +1,34 @@
+
+[
+  {
+    "name": "Lauren",
+    "completed": 70,
+    "placement": "/assets/first-place.png",
+    "image": "/assets/person-06.png",
+    "progress": 70
+  },
+  
+  {
+    "name": "John",
+    "completed": 50,
+    "placement": "/assets/second-place.png",
+    "image": "/assets/person-07.png",
+    "progress": 50
+  },
+
+  {
+    "name": "Steven",
+    "completed": 30,
+    "placement": "/assets/third-place.png",
+    "image": "/assets/person-01.png",
+    "progress": 30
+  },
+
+  {
+    "name": "You",
+    "completed": 10,
+    "placement": "/assets/fifth-place.png",
+    "image": "/assets/person-03.png",
+    "progress": 10
+  }
+]
