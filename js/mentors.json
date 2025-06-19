@@ -2,28 +2,28 @@
   {
     "name": "Ella Donald",
     "phone": "027 554 334",
-    "email": "Quack@gmail.com",
+    "career": "Graphic Designer",
     "image": "/assets/person-05.png"
   },
 
   {
     "name": "Larry Perkins",
     "phone": "020 543 234",
-    "email": "Perky2@gmail.com",
+    "career": "UX Designer",
     "image": "/assets/person-07.png"
   },
 
   {
     "name": "Ben Towny",
     "phone": "021 222 332",
-    "email": "Towny2@gmail.com",
+    "career": "Motion Designer",
     "image": "/assets/person-01.png"
   },
 
   {
     "name": "Han Some",
     "phone": "023 434 344",
-    "email": "Some1@gmail.com",
+    "career": "Design Expert",
     "image": "/assets/person-04.png"
   }
 ]

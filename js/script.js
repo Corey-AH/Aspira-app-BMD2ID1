@@ -51,8 +51,7 @@ fetch('/js/mentors.json')
               <p>${person.phone}</p>
             </div>
             <div class="favourited-details">
-              <img src="/icons/email-white.png" alt="Email">
-              <p>${person.email}</p>
+              <p>${person.career}</p>
             </div>
           </div>
         </div>
@@ -142,5 +141,35 @@ window.addEventListener("load", function () {
     stepsContainer.appendChild(newStep);
 
     localStorage.removeItem("addPrototyping");
+  }
+});
+
+
+
+
+//Send Message
+function sendMessage() {
+  const input = document.getElementById("messageInput");
+  const message = input.value.trim();
+
+  if (message !== "") {
+    const chatBox = document.getElementById("chat-box");
+
+    const newMessage = document.createElement("div");
+    newMessage.classList.add("message", "sent");
+    newMessage.innerHTML = `
+      <img src="/assets/person-07.png" class="profile">
+      <div class="text-bubble">${message}</div>
+    `;
+
+    chatBox.appendChild(newMessage);
+    input.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+}
+
+document.getElementById("messageInput").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    sendMessage();
   }
 });
