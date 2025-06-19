@@ -1,3 +1,5 @@
+
+//Goals Database
 const goalList = document.getElementById('goalList');
 
 fetch('/js/data.json')         
@@ -29,6 +31,44 @@ fetch('/js/data.json')
 
 
 
+//Mentors Database
+fetch('/js/mentors.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.querySelector('#mentors'); 
+
+    data.forEach(person => {
+      const card = document.createElement('div');
+      card.classList.add('favourited-cards', 'green');
+
+      card.innerHTML = `
+        <div class="favourited-cards-content">
+          <img src="${person.image}" alt="${person.name}">
+          <div class="favourite-content">
+            <h4>${person.name}</h4>
+            <div class="favourited-details">
+              <img src="/icons/phone-white.png" alt="Phone">
+              <p>${person.phone}</p>
+            </div>
+            <div class="favourited-details">
+              <img src="/icons/email-white.png" alt="Email">
+              <p>${person.email}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+  });
+
+
+
+
+
+
+
+// Leaderboard Database
 const leaderboardList = document.querySelector('.leaderboard-list');
 
 fetch('/js/leaderboard.json')
@@ -59,6 +99,8 @@ fetch('/js/leaderboard.json')
 
 
 
+
+//Upload New Goal
 document.addEventListener("DOMContentLoaded", function () {
   const addBtn = document.getElementById("addPrototyping");
   const overlay = document.getElementById("tickOverlay");
